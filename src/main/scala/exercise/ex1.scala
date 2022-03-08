@@ -2,10 +2,10 @@ package exercise
 
 object ex1:
 
-  def parityDef(x: Int): String = x match
-    case n if n % 2 == 0 => "even"
-    case n if n % 2 == 1 => "odd"
+  def parityDef(x: Int): String = x % 2 match
+    case 0 => "even"
+    case 1 => "odd"
 
-  val parityVal: Int => String = _ match
-    case n if n % 2 == 0 => "even"
-    case n if n % 2 == 1 => "odd"
+  val parityVal: Int => String = _ % 2 match
+    case 0 => "even"
+    case 1 => "odd"

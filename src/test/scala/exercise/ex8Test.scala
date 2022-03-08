@@ -25,12 +25,12 @@ class ex8Test:
     assertEquals(None(), filter(None[Int]())(_ > 2))
 
   @Test def testMap2SomeTrue(): Unit =
-    assertEquals(Some(8), map2(Some(5))(Some(3))((a, b) => a + b))
+    assertEquals(Some(8), map2(Some(5))(Some(3))(_ + _))
 
   @Test def testMap2NoneFalse(): Unit =
-    assertEquals(None(), map2(Some(5))(None[Int]())((a, b) => a + b))
+    assertEquals(None(), map2(Some(5))(None[Int]())(_ + _))
 
   @Test def testMap2WithNone(): Unit =
-    assertEquals(None(), map2(None[Int]())(None[Int]())((a, b) => a + b))
+    assertEquals(None(), map2(None[Int]())(None[Int]())(_ + _))
 
 

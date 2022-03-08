@@ -10,10 +10,10 @@ import org.junit.Test
 
 class ex7Test:
   @Test def testCircleArea(): Unit =
-    assertEquals(3 * 3 * 3.14, area(Circle(3)), 0.5)
+    assertEquals(3 * 3 * Math.PI, area(Circle(3)), 0.5)
 
   @Test def testCirclePerimeter(): Unit =
-    assertEquals(2 * 3 * 3.14, perimeter(Circle(3)), 0.5)
+    assertEquals(2 * 3 * Math.PI, perimeter(Circle(3)), 0.5)
 
   @Test def testSquareArea(): Unit =
     assertEquals(3 * 3, area(Square(3)), 0.5)

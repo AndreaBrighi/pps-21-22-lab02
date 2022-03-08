@@ -16,6 +16,6 @@ object ex7:
 
 
     def area(shape: Shape): Double = shape match
-      case Circle(r) => Math.pow(r, 2) * Math.PI
+      case Circle(r) => r * r * Math.PI
       case Square(l) => l * l
       case Rectangle(w, h) => w * h

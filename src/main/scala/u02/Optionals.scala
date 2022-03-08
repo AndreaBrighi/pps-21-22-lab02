@@ -22,7 +22,6 @@ object Optionals extends App :
 
     def filter[A](opt: Option[A])(f: A => Boolean): Option[A] = opt match
       case Some(a) if f(a) => Some(a)
-      case Some(a) if !f(a) => None()
       case _ => None()
 
     def map[A, B](opt: Option[A])(f: A => B): Option[B] = opt match
